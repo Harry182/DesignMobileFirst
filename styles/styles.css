@@ -172,3 +172,18 @@ h2 {
   display: flex;
   align-items: center;
 }
+
+@media screen and (min-width: 480px) {
+  body {
+    /* border: 1px solid red; */
+  }
+  .grid {
+    /* border: 1px solid purple; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
