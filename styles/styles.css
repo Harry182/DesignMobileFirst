@@ -22,6 +22,40 @@ body {
   display: grid;
   grid-row-gap: 25px;
 }
+.dark-mode {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+.checkbox {
+  display: none;
+}
+/* selectto adyacente */
+.checkbox:checked ~ .switch::before {
+  transform: translateX(0);
+}
+.switch {
+  height: 40px;
+  display: block;
+  border-radius: 20px;
+  background: var(--gray);
+  width: 80px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+.switch::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50px;
+  transform: translateX(40px);
+  transition: 0.3s;
+  will-change: transform;
+}
 
 .header {
   /* display: none; */
@@ -38,7 +72,7 @@ h1 {
   color: var(--gray);
   font-weight: bold;
   margin: 0.5em 0;
-  border-bottom: 2px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
   padding-bottom: 1.5em;
 }
 .top-cards {
@@ -215,6 +249,9 @@ h2 {
   .card__followers-title {
     color: #8088ad;
   }
+  .card-title {
+    color: var(--gray);
+  }
   .card-today {
     color: white;
   }
@@ -223,5 +260,11 @@ h2 {
   }
   .card__small-views {
     color: #8088ad;
+  }
+  .switch {
+    background-image: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+  }
+  .switch::before {
+    background: #282943;
   }
 }
