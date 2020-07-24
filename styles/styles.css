@@ -214,6 +214,14 @@ h2 {
   display: flex;
   align-items: center;
 }
+footer a {
+  text-decoration: none;
+  outline: none;
+  color: var(--baseColor);
+}
+footer a:hover {
+  font-weight: 600;
+}
 
 @media screen and (min-width: 480px) {
   .grid {
